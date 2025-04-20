@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../style/DeepSeek.css'
+import '../style/model.css'
 
 const ChatGPT = () => {
       const [messages, setMessages] = useState([]);

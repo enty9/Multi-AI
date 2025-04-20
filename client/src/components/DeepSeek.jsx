@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import '../style/DeepSeek.css';
+import '../style/model.css';
 import { useNavigate } from 'react-router-dom';
 
 
