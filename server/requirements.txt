@@ -1,0 +1,6 @@
+g4f[all]
+flask
+flask_cors
+flask_migrate
+flask_sqlalchemy
+dotenv
