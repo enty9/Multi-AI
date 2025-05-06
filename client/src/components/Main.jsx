@@ -74,7 +74,6 @@ const Main = (props) => {
                             <button data-lang="en" ref={engbut} onClick={SwitchLangToEN}>English</button>
                         </div>
                     </div>
-                    
                     <button class="mobile-menu-toggle">
                         <i class="fas fa-bars"></i>
                     </button>

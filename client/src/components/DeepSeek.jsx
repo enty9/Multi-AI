@@ -11,6 +11,7 @@ const DeepSeek = () => {
   const [chats, setChats] = useState([])
   const [allchats, setAllchats] = useState([])
 
+
   const messagesEndRef = useRef(null);
 
   const rout = useNavigate()
@@ -64,6 +65,7 @@ const DeepSeek = () => {
         user: userMessage,
         ai: aiMessage
       }])
+
     } catch (error) {
       console.error('Ошибка запроса:', error);
       
@@ -80,6 +82,25 @@ const DeepSeek = () => {
     }
   }
 
+  const createChat = () => {
+    setMessages([])
+    
+  }
+  /*
+  const openChat = (key) => {
+    const userMessage = {
+      content: chats.user.content,
+      isUser: chats.user.isUser
+    };
+    const aiMessage = {
+      content: chats.ai.content,
+      isUser: chats.ai.isUser
+    }
+    setMessages(prev => [...prev, userMessage])
+    setMessages(prev => [...prev, aiMessage])
+  }
+*/
+
   const handleBack = () => {
     rout(-1)
     setMessages([]);
@@ -89,7 +110,7 @@ const DeepSeek = () => {
     <div className="app-container">
       <div className="sidebar">
         <div className="sidebar-header">
-          <button className="new-chat-btn">+ Новый чат</button>
+          <button className="new-chat-btn" onClick={createChat}>+ Новый чат</button>
         </div>
         <div className="chat-history">
           {chatHistory.map(chat => (
