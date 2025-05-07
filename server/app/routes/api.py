@@ -13,7 +13,7 @@ def sendGpt():
         messages=[{"role": "user", "content": data['msg']}],
         web_search=False,
     )
-    print(response.choices[0].message.content)
+    
     return jsonify({
         'data': response.choices[0].message.content,
         'status': 'success'
@@ -22,17 +22,14 @@ def sendGpt():
 @api_bp.route('/api/deepseek', methods=['POST'])
 def sendDeep():
     data = request.get_json()
-    '''
     response = client.chat.completions.create(
         model=g4f.models.deepseek_v3,
         messages=[{"role": "user", "content": data['msg']}],
         web_search=False
     )
-    print(data['msg'])
-    print(response.choices[0].message.content)
-    '''
+   
     return jsonify({
-        'data': f'You say {data['msg']}',
+        'data': response.choices[0].message.content,
         'status': 'success'
     }), 201
 
